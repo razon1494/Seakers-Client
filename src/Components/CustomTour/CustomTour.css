@@ -1,0 +1,21 @@
+.custom-container{
+    background-color: ivory;
+}
+.custom-title{
+color: rebeccapurple;
+    /* color: mediumaquamarine;
+    color: sienna; */
+    color: Teal;
+    color: olivedrab;
+    letter-spacing: 7px;
+    font-weight: 700;
+    text-decoration: underline overline;
+}
+.custom-head{
+    color: rgba(255, 99, 71, 0.788);
+}
+
+.custom p{
+    text-align: justify;
+    font-size: 1.2rem;
+}

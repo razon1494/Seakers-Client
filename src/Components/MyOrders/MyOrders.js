@@ -7,7 +7,7 @@ const MyOrders=() => {
     const [bookings, setBookings]=useState();
      const [control, setConrol] = useState(false);
       useEffect(() => {
-    fetch(`http://localhost:5000/mybookings/${user?.email}`)
+    fetch(`https://peaceful-temple-09783.herokuapp.com/mybookings/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setBookings(data));
       }, [control]);
@@ -16,7 +16,7 @@ const MyOrders=() => {
     const handleDelete=(id) => {
         var sure=window.confirm(`Are you sure you want to cancel this trip?`);
         if(sure) {
-      fetch(`http://localhost:5000/deletebooking/${id}`, {
+      fetch(`https://peaceful-temple-09783.herokuapp.com/deletebooking/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })

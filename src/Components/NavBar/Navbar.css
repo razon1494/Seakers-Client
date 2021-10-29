@@ -3,7 +3,7 @@
 }
 .navbar-title{
    text-decoration: none;
-    color: seagreen;
+    color: DarkSlateGray;
 }
 .navbar-title h2{
     font-weight: bold;
@@ -17,5 +17,5 @@
     border-radius: 10px;
 }
 .nav-items:hover{
-    background-color:rgba(216, 191, 216, 0.747);
+    background-color:rgba(143, 188, 143, 0.61);
 }

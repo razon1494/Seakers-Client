@@ -6,7 +6,7 @@ const AddService=() => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit=data => {
         console.log(data);
-        axios.post(`http://localhost:5000/addservice `, data)
+        axios.post(`https://peaceful-temple-09783.herokuapp.com/addservice `, data)
             .then(res => {
                 if(res.data.insertedId) {
                     alert('Data Added SuccessFully');
@@ -27,6 +27,9 @@ const AddService=() => {
                 <br /><br />
         <h6 className='d-inline'>Speciality  :   </h6>
                 <input {...register("speciality", {required: true, maxLength: 20})} placeholder='speciality' />
+                <br /><br />
+        <h6 className='d-inline'>Duration :   </h6>
+                <input {...register("duration", {required: true, maxLength: 20})} placeholder='duration' />
                 <br /><br />
         <h6 className='d-inline'>Distance :   </h6>
                 <input type="number" {...register("distance", {required: true})} placeholder='Distance From Dhaka' />

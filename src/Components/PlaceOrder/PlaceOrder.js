@@ -11,7 +11,7 @@ const PlaceOrder=() => {
     const [service, setService]=useState();
     const [address, setAddress]=useState('');
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://peaceful-temple-09783.herokuapp.com/services/${id}`)
             .then(res => res.json())
         .then(data => setService(data))
     }, []);
@@ -20,7 +20,7 @@ const PlaceOrder=() => {
         service.status=false;
         service.address=address;
         console.log(service);
-        fetch("http://localhost:5000/placeorder", {
+        fetch("https://peaceful-temple-09783.herokuapp.com/placeorder", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(service),

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AddService from './Components/AddService/AddService';
 import ManageOrders from './Components/ManageOrders/ManageOrders';
@@ -11,6 +10,8 @@ import {Route, Switch} from 'react-router-dom';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
 import NavBar from './Components/NavBar/NavBar';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <BrowserRouter>
           <NavBar></NavBar>
+          <br /><br /><br />
         <Switch>
           <Route exact path='/'>
             <Home></Home>
@@ -26,26 +28,26 @@ function App() {
           <Route exact path='/home'>
             <Home></Home>
           </Route>
-          <Route exact path='/addservice'>
+          <PrivateRoute exact path='/addservice'>
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
           <Route exact path='/login'>
             <Login></Login>
           </Route>
-          <Route exact path='/manageorders'>
+          <PrivateRoute exact path='/manageorders'>
             <ManageOrders></ManageOrders>
-          </Route>
-          <Route exact path='/myorders'>
+          </PrivateRoute>
+          <PrivateRoute exact path='/myorders'>
             <MyOrders></MyOrders>
-          </Route>
-          <Route exact path='/placeorder/:id'>
+          </PrivateRoute>
+          <PrivateRoute exact path='/placeorder/:id'>
             <PlaceOrder></PlaceOrder>
-          </Route>
+          </PrivateRoute>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
       </Switch>
-
+<Footer></Footer>
         </BrowserRouter>
         </AuthProvider>
     </div>

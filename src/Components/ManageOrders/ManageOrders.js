@@ -4,7 +4,7 @@ const ManageOrders=() => {
     const [services, setServices]=useState([]);
     const [check, setCheck] = useState(true);
         useEffect(() => {
-        fetch('http://localhost:5000/managebookings')
+        fetch('https://peaceful-temple-09783.herokuapp.com/managebookings')
             .then(res => res.json())
             .then(data => setServices(data));
         }, [check])
@@ -12,7 +12,7 @@ const ManageOrders=() => {
     console.log("Aaageee  ",check);
     //status update
     const handleApprove=id => {
-        const url=`http://localhost:5000/services/${id}`;
+        const url=`https://peaceful-temple-09783.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
