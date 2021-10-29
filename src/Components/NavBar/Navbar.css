@@ -1,0 +1,21 @@
+.navigation-bar{
+    background-color: whitesmoke;
+}
+.navbar-title{
+   text-decoration: none;
+    color: seagreen;
+}
+.navbar-title h2{
+    font-weight: bold;
+}
+.navbar-title:hover{
+    text-decoration: none;
+    color:sienna;
+}
+.nav-items{
+    text-decoration: none;
+    border-radius: 10px;
+}
+.nav-items:hover{
+    background-color:rgba(216, 191, 216, 0.747);
+}

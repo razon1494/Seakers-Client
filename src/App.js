@@ -9,11 +9,16 @@ import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import {BrowserRouter} from 'react-router-dom/cjs/react-router-dom.min';
 import {Route, Switch} from 'react-router-dom';
 import NotFound from './Components/NotFound/NotFound';
+import AuthProvider from './context/AuthProvider';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <AuthProvider>
+
+        <BrowserRouter>
+          <NavBar></NavBar>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
@@ -41,7 +46,8 @@ function App() {
           </Route>
       </Switch>
 
-      </BrowserRouter>
+        </BrowserRouter>
+        </AuthProvider>
     </div>
   );
 }
