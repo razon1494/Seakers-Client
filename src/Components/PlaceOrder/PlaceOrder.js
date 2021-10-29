@@ -16,6 +16,7 @@ const PlaceOrder=() => {
     }, []);
     const handlePlaceOrder=() => {
         service.email=user?.email;
+        service.status=false;
         console.log(service);
         fetch("http://localhost:5000/placeorder", {
             method: "POST",
