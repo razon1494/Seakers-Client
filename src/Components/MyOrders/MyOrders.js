@@ -16,7 +16,7 @@ const MyOrders=() => {
     const handleDelete=(id) => {
         var sure=window.confirm(`Are you sure you want to cancel this trip?`);
         if(sure) {
-            fetch(`http://localhost:5000/deletebooking/${id}`, {
+      fetch(`http://localhost:5000/deletebooking/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })
