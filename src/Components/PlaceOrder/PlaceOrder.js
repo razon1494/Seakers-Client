@@ -9,6 +9,7 @@ const PlaceOrder=() => {
     const history=useHistory();
     console.log(id);
     const [service, setService]=useState();
+    const [addedService, setAddedService]=useState({});
     const [address, setAddress]=useState('');
     useEffect(() => {
         fetch(`https://peaceful-temple-09783.herokuapp.com/services/${id}`)
@@ -16,14 +17,20 @@ const PlaceOrder=() => {
         .then(data => setService(data))
     }, []);
     const handlePlaceOrder=() => {
-        service.email=user?.email;
-        service.status=false;
-        service.address=address;
+        addedService.email=user?.email;
+        addedService.status=false;
+        addedService.address=address;
+        addedService.placeName=service.placeName;
+        addedService.speciality=service.speciality;
+        addedService.distance=service.distance;
+        addedService.cost=service.cost;
+        addedService.image=service.image;
+        addedService.season=service.season;
         console.log(service);
         fetch("https://peaceful-temple-09783.herokuapp.com/placeorder", {
             method: "POST",
             headers: {"content-type": "application/json"},
-            body: JSON.stringify(service),
+            body: JSON.stringify(addedService),
         })
             .then((res) => res.json())
             .then((result) => console.log(result))
@@ -39,23 +46,33 @@ const PlaceOrder=() => {
 
     return (
         <div>
-            {/* <img className='img-fluid' src={service?.image} alt="" /> */}
-            <h3>{service?.placeName}</h3>
-            <h5>Price: {service?.cost}</h5>
-            <p className="px-3">{service?.speciality}</p>
-            <p>Your Email: {user.email}</p>
-            <p>Your Name: {user.displayName}</p>
-            <p>Hello, {user.displayName} Please Put Your address so that we can send you all booking details, Hardcopy of tickets to your address. Also All documents will also be mailed to your email address {user.email} </p>
-            <p className=''>Your Address</p>
-            <textarea onBlur={handleAddress} className="form-control container w-50 my-3" placeholder='Address' />
+            <h1 className='book-title'>You Want To Book {service?.placeName} Package</h1>
+        <div className='row my-5 mx-auto container align-items-center justify-content-center'>
+            <div className='col-md-6'>
+            <img className='img-fluid' src={service?.image} alt="" /></div>
+            <div className='details text col-md-6'>
+            <h3 className='details-title'>{service?.placeName}</h3>
+            <h5 className='price'>Price: {service?.cost}/person</h5>
+            <h5 className="text-start spots"> <span className='span'> Spots Will Be visited:</span> {service?.speciality}</h5>
+            <p className='text-start'>Your Email: {user.email}</p>
+            <p className='text-start'>Your Name: {user.displayName}</p>
+            <p className='text-start'>Hello, {user.displayName} Please Put Your addressbelow. Hardcopy of tickets to your address. Also All documents will also be mailed to your email address {user.email} </p>
+            <h5 className='address'>Your Address</h5>
+            <textarea onChange={handleAddress} className="form-control container my-3" placeholder='Address' />
             {
                (address === '') ? <button onClick={handlePlaceOrder} className="btn btn-danger disabled">Place Your Order</button> : <button onClick={handlePlaceOrder} className="btn btn-danger">Place Your Order</button>
             }
 
             <Link to={`/`}>
 
-            </Link>
-        </div>
+                </Link>
+            </div>
+            <div className='more my-5'>
+                <h2 className='details-head'>More About {service?.placeName}</h2>
+                <p className='details-p'>{service?.details}</p>
+
+            </div>
+        </div></div>
     );
 };
 

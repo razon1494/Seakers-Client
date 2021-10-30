@@ -1,0 +1,72 @@
+.add-title{
+    color:olive
+}
+.add-now{
+    color: darkslategray;
+    font-size: 3rem;
+    margin-top:50px;
+    letter-spacing: 5px;
+    word-spacing: 15px;
+    text-decoration: underline overline;
+}
+
+.add-container{
+    background-color: rgba(169, 169, 169, 0.719);
+}
+
+/* .submit-part{
+    color: orangered;
+    border: none;
+    border-radius: 50px;
+    background-color: orchid;
+} */
+
+
+
+
+/* CSS */
+.submit-part {
+  background-color:rgba(6, 46, 6, 0.808);
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submit-part:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.submit-part:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .submit-part {
+    padding: 16px 48px;
+  }
+}

@@ -1,0 +1,21 @@
+.booking-title{
+    color: Teal;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-decoration: underline overline;
+}
+
+.booking-sub{
+    text-align: justify;
+    line-height: 25px;
+    font-size: 1.2rem;
+}
+
+.cross{
+    color: red;
+    font-size: 1.5rem;
+}
+.arrow{
+color: forestgreen;
+    font-size: 1.5rem;
+}

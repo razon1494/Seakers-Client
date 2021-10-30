@@ -26,7 +26,7 @@ const NavBar = () => {
       {user?.email && <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to="/addservice">Add Tour</NavLink>}
       {user?.email ?
       <Button onClick={logOut} className='nav-items fs-6 px-3  py-2 fw-bold text-dark text-start' as={Link} to="/login" variant="light">Logout</Button> :
-      <Nav.Link className='nav-items fs-6 px-3  py-2 fw-bold text-dark' as={Link} to="/login">Login</Nav.Link>}
+      <Nav.Link className='nav-items fs-6 px-3  py-2 fw-bold text-dark' as={Link} to="/login">Sign In</Nav.Link>}
       <Navbar.Text>
           <p className='text-danger fw-bold'>{user?.displayName}</p>
       </Navbar.Text>

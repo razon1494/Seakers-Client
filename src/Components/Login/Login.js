@@ -16,10 +16,12 @@ const Login=() => {
     }).finally(()=>setIsLoading(true))
   }
     return (
-        <div>
-            <h2>Please Complete Your Login</h2>
-            <button onClick={handleGoogleLogin} className='google-btn me-3'>Google Sign In</button>
-        </div>
+      <div className='login-container'>
+        <div className='login'>
+        <h2 className='pt-4'>Simply Login With Your Google Account</h2>
+        <h2 className='pb-4'>Click Below And Start an adventures Journey</h2>
+        <button  onClick={handleGoogleLogin} className='google-btn me-3'>Google Sign In</button>
+        </div></div>
     );
 };
 

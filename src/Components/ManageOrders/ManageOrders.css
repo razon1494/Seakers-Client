@@ -1,0 +1,26 @@
+.admin-title{
+    font-weight: 700;
+    color: darkolivegreen;
+    text-decoration: underline;
+}
+.admin-warn{
+    color: red;
+}
+
+.direction{
+    color: darkslategray;
+}
+.text-start li{
+    font-size: 1.4rem;
+    font-weight: 600;
+
+}
+.text-start li:hover{
+    color: sienna;
+    text-decoration: underline overline;
+    cursor: pointer;
+}
+.tik{
+    color: green;
+    font-size: 1.5rem;
+}

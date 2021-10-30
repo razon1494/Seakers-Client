@@ -1,0 +1,46 @@
+.book-title{
+    font-weight: 700;
+    color: darkolivegreen;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+.details-title{
+    font-weight: 700;
+    color: darkslategray;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+.price{
+    color: firebrick;
+}
+.spots{
+    color: rgba(255, 68, 0, 0.774);
+    font-weight: 600;
+    font-size: 1.4rem;
+
+}
+.span{
+    color: darkslategray;
+}
+.details p{
+    font-size: 20px;
+    color: gray;
+    font-weight: 500;
+}
+.address{
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: darkslategray;
+
+}
+.details-head{
+font-weight: 700;
+    color: darkslategray;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-decoration: underline ;
+    margin-bottom: 20px;
+}
+.details-p{
+    text-align: justify;
+}

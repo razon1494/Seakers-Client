@@ -17,40 +17,55 @@ const AddService=() => {
 
   }
     return (
-        <div>
-            <h2>Wanna Add A new Service</h2>
-            <br /><br />
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <h6 className='d-inline'>Place Name : </h6>
+        <div className='container'>
+            <h2 className='add-title my-4'>You Can Add or Custom Your Tour Here</h2>
+            <h5 className='admin-warn' >*Read below list carefully before starting the form fill up</h5>
 
-                <input {...register("placeName", {required: true, maxLength: 20})} placeholder='Place Name' />
+            <h2 className='text-start my-3 direction' >Direction to access the admin dashboard</h2>
+            <ul className='text-start' >
+                <li>You Must Have to Fill up all the fields</li>
+                <li>If you put irrelevant data our admin panel can change or delete your tour without notice</li>
+                <li>Please use hosted image url we do not allow copyright images</li>
+                <li>Once you have added all these you can see the card of your tour on home page click there to place your order</li>
+                <li>You can not change or modify after adding the tour</li>
+                <li>Please contact with us to update or modify your trip</li>
+                <li>Your given package fee can be changed or modified. We will let you know</li>
+            </ul>
+            <div className='add-container p-4'>
+            <h2 className='add-now'>ADD NOW</h2>
+
+            <br /><br />
+            <form className='form row align-items-center justify-content-center' onSubmit={handleSubmit(onSubmit)}>
+                <h5 className='d-inline col-md-4'>Place Name : </h5>
+
+                <input className='col-md-8 py-3 my-3' {...register("placeName", {required: true})} placeholder='Place Name' />
                 <br /><br />
-        <h6 className='d-inline'>Speciality  :   </h6>
-                <input {...register("speciality", {required: true, maxLength: 20})} placeholder='speciality' />
+        <h5 className='d-inline col-md-4'>Spots  :   </h5>
+                <input className='col-md-8 py-3 my-3' {...register("speciality", {required: true})} placeholder='spots list' />
                 <br /><br />
-        <h6 className='d-inline'>Duration :   </h6>
-                <input {...register("duration", {required: true, maxLength: 20})} placeholder='duration' />
+        <h5 className='d-inline col-md-4'>Duration :   </h5>
+                <input className='col-md-8 py-3 my-3' {...register("duration", {required: true})} placeholder='duration' />
                 <br /><br />
-        <h6 className='d-inline'>Distance :   </h6>
-                <input type="number" {...register("distance", {required: true})} placeholder='Distance From Dhaka' />
+        <h5 className='d-inline col-md-4'>Distance :   </h5>
+                <input className='col-md-8 py-3 my-3' type="number" {...register("distance", {required: true})} placeholder='Distance From Dhaka' />
                 <br /><br />
-                <h6 className='d-inline'>Transport  :   </h6>
-                <input {...register("transport", {required: true})} placeholder='Transport' />
+                <h5 className='d-inline col-md-4'>Transport  :   </h5>
+                <input className='col-md-8 py-3 my-3' {...register("transport", {required: true})} placeholder='Transport' />
                 <br /><br />
-                <h6 className='d-inline'>Package Fee :   </h6>
-                <input type="number" {...register("cost", {required: true})} placeholder='Cost' />
+                <h5 className='d-inline col-md-4'>Package Fee :   </h5>
+                <input className='col-md-8 py-3 my-3' type="number" {...register("cost", {required: true})} placeholder='Cost' />
                 <br /><br />
-                 <h6 className='d-inline'>Season :   </h6>
-                <input  {...register("season", {required: true})} placeholder='Season' />
+                 <h5 className='d-inline col-md-4'>Season :   </h5>
+                <input className='col-md-8 py-3 my-3'  {...register("season", {required: true})} placeholder='Season' />
                 <br /><br />
-                 <h6 className='d-inline'>Photo URL :   </h6>
-                <input {...register("image", {required: true})} placeholder='Photo URL' />
+                 <h5 className='d-inline col-md-4'>Photo URL :   </h5>
+                <input className='col-md-8 py-3 my-3' {...register("image", {required: true})} placeholder='Photo URL' />
                 <br /><br />
-                 <h6 className=''>Description   </h6>
-                <textarea className="form-control container"{...register("details", {required: true})} placeholder='Details' />
+                 <h3 className='my-4'>Write Description About Your Tour below   </h3>
+                <textarea  className="form-control m-3 p-4 w-75"{...register("details", {required: true})} placeholder='Details' />
                 <br /><br />
-      <input type="submit" />
-    </form>
+      <input className='w-25 submit-part py-2 my-3 fs-3' type="submit" />
+    </form></div>
 
         </div>
     );
