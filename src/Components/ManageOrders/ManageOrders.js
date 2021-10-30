@@ -69,8 +69,8 @@ const ManageOrders=() => {
       <th scope="col">#</th>
                         <th scope="col">Place</th>
                         <th scope="col">User</th>
-      <th scope="col">email</th>
-      <th scope="col">Phone</th>
+      <th scope="col">email & Phone</th>
+      {/* <th scope="col">Phone</th> */}
       <th scope="col">Status</th>
       {/* <th scope="col">Processing</th> */}
       <th scope="col">Delete</th>
@@ -82,8 +82,8 @@ const ManageOrders=() => {
                             <th scope="row">{index++}</th>
                             <td>{service.placeName}</td>
                             <td>{service.displayName}</td>
-                            <td>{service.email}</td>
-                            <td>{service.phonenumber}</td>
+                            <td>{service.email} <br /> {service.phonenumber}</td>
+                            {/* <td>{service.phonenumber}</td> */}
                             <td>
                                 {
                         service.status? <button disabled className='btn btn-success'>Approved</button>:<button className='btn btn-success' onClick={() => handleApprove(service._id)}>Pending! Click to Approve</button>
