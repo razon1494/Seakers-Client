@@ -4,7 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../context/useAuth';
 import './Navbar.css'
 
-const NavBar = () => {
+const NavBar=() => {
+  //destructuring from auth context
     const { user, logOut } = useAuth();
     return (
         <div className="mb-2">
@@ -12,7 +13,7 @@ const NavBar = () => {
   <Container>
             <Navbar.Brand>
               <NavLink to='/home' className='navbar-title'>
-               <h2 className='nav-head'>SEA <span className='kers' >KERS</span> </h2>
+               <h2 className='nav-head'>SEA<span className='kers'>KERS</span> </h2>
                 </NavLink>
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />

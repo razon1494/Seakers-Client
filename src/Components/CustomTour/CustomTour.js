@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './CustomTour.css'
-const CustomTour = () => {
+const CustomTour=() => {
+    // a part will be added on home page for branding
     return (
         <div className='custom-container py-1'>
             <div className="container">

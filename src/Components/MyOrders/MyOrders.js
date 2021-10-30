@@ -5,6 +5,7 @@ import useAuth from '../../context/useAuth';
 import FlyDubai from '../FlyDubai/FlyDubai';
 import './MyOrders.css';
 const MyOrders=() => {
+  //destructuring for getting
     const {user}=useAuth();
     const [bookings, setBookings]=useState();
     const [control, setConrol] = useState(false);
@@ -39,7 +40,7 @@ const MyOrders=() => {
         <h2 className='booking-title my-4'>YOU HAVE {bookings?.length} BOOKINGS</h2>
         <p className='booking-sub'>Manage tour bookings here. Here we showing you all the bookings you have made. You can Delete any one. It's totally upto you. But all the orders are now pending to confirm the order please click on the confirm button it will redirect you to our manage bookings page where you will see all bookings of people. Just find your desire on and click for approval. Our all services process will beactivated after your approval. Any question feel free to contact us. We are always there for serve you.</p>
         <h2 className='booking-title my-4'>{user?.displayName}'s Order List</h2>
-
+<div className='table-responsive'>
         <table className="table table-hover">
           <thead>
     <tr>
@@ -66,7 +67,7 @@ const MyOrders=() => {
               </tr>
                 </tbody> )
           }
-        </table>
+        </table></div>
         <FlyDubai></FlyDubai>
 
         </div>

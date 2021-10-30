@@ -2,6 +2,7 @@ import React from 'react';
 import './AddService.css';
 import { useForm} from "react-hook-form";
 import axios from 'axios';
+//sending the added data to server
 const AddService=() => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit=data => {
@@ -9,9 +10,10 @@ const AddService=() => {
         axios.post(`https://peaceful-temple-09783.herokuapp.com/addservice `, data)
             .then(res => {
                 if(res.data.insertedId) {
+                    //confirmation
                     alert('Data Added SuccessFully');
+                    //reset the form
                     reset()
-
                 }
             })
 
@@ -20,7 +22,6 @@ const AddService=() => {
         <div className='container'>
             <h2 className='add-title my-4'>You Can Add or Custom Your Tour Here</h2>
             <h5 className='admin-warn' >*Read below list carefully before starting the form fill up</h5>
-
             <h2 className='text-start my-3 direction' >Direction to access the admin dashboard</h2>
             <ul className='text-start' >
                 <li>You Must Have to Fill up all the fields</li>
@@ -34,7 +35,8 @@ const AddService=() => {
             <div className='add-container p-4'>
             <h2 className='add-now'>ADD NOW</h2>
 
-            <br /><br />
+                <br /><br />
+                {/* ******* Add form starts here *********/}
             <form className='form row align-items-center justify-content-center' onSubmit={handleSubmit(onSubmit)}>
                 <h5 className='d-inline col-md-4'>Place Name : </h5>
 

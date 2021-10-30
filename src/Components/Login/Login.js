@@ -3,9 +3,10 @@ import './Login.css';
 import useAuth from '../../context/useAuth'
 import {useHistory, useLocation} from 'react-router-dom/cjs/react-router-dom.min';
 const Login=() => {
+  //destructuring googlesign in from auth context
     const {signInUsingGoogle, setIsLoading}=useAuth();
 
-      //redirect google login
+//redirect google login
   const location=useLocation();
   const history=useHistory();
 

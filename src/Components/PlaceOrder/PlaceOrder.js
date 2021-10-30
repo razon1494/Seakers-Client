@@ -4,19 +4,24 @@ import {Link, useParams} from 'react-router-dom';
 import useAuth from '../../context/useAuth';
 import './PlaceOrder.css';
 const PlaceOrder=() => {
+    //destructuring user
     const {user}=useAuth();
+    //getting params from url
     const {id}=useParams();
     const history=useHistory();
-    console.log(id);
+    //required state declaration
     const [service, setService]=useState();
     const [phoneNumber, setPhoneNumber]=useState('');
-    const [addedService, setAddedService]=useState({});
+    // new service
+    const addedService={};
     const [address, setAddress]=useState('');
+    //getting specfic data
     useEffect(() => {
         fetch(`https://peaceful-temple-09783.herokuapp.com/services/${id}`)
             .then(res => res.json())
         .then(data => setService(data))
     }, []);
+    //placing data to server to db
     const handlePlaceOrder=() => {
         addedService.email=user?.email;
         addedService.displayName=user?.displayName;

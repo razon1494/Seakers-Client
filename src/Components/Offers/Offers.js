@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Offers.css'
-const Offers = () => {
+const Offers=() => {
+    //for homepage part
     return (
         <div className='offer-container container py-3'>
             <h2 className='offer-title my-4'>OUR NOVEMBER OFFER</h2>

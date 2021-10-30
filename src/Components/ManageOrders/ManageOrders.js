@@ -2,17 +2,16 @@ import React, {useEffect, useState} from 'react';
 import useAuth from '../../context/useAuth';
 import './ManageOrders.css'
 const ManageOrders=() => {
+
     const [services, setServices]=useState([]);
     const [check, setCheck]=useState(true);
     const [control, setConrol]=useState(false);
-    const {user}=useAuth();
-        useEffect(() => {
+//Getting Booking Data
+    useEffect(() => {
         fetch('https://peaceful-temple-09783.herokuapp.com/managebookings')
             .then(res => res.json())
             .then(data => setServices(data));
-        }, [check, control])
-    console.log(services);
-    console.log("Aaageee  ",check);
+    }, [check, control]);
     //status update
     const handleApprove=id => {
         const url=`https://peaceful-temple-09783.herokuapp.com/services/${id}`;
@@ -28,6 +27,7 @@ const ManageOrders=() => {
             })
         .finally()
     }
+    //deleting the specific item
      const handleDelete=(id) => {
         var sure=window.confirm(`Are you sure you want to cancel this trip?`);
         if(sure) {
@@ -46,6 +46,7 @@ const ManageOrders=() => {
         }
     console.log(id);
     };
+    //table index variable
     let index=1;
     return (
         <div className='admin container mt-4 mb-5'>

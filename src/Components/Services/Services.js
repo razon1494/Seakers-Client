@@ -5,6 +5,7 @@ import './Services.css';
 const Services=() => {
     const [services, setServices]=useState([]);
     const [loading, setLoading]=useState(true);
+    //getting all data
         useEffect(() => {
         fetch('https://peaceful-temple-09783.herokuapp.com/services')
             .then(res => res.json())
@@ -17,6 +18,7 @@ const Services=() => {
     return (
         <div id="services">
             <h2 className="services-title mt-5">TOUR PACKAGES</h2>
+            {/* Spinner */}
             {
                 loading && <Spinner animation="grow" variant="warning" />
             }

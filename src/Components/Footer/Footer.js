@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom/cjs/react-router-dom.min';
 import './Footer.css'
-const Footer = () => {
+const Footer=() => {
+    //footer here
     return (
         <div>
 <footer class="footer-distributed">
@@ -25,7 +25,7 @@ Mohakhali DOHS,</span>  Dhaka, Bangladesh</p>
 
         <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">info@freerun.net</a></p>
+            <p><a href="mailto:support@company.com">info@seakers.net</a></p>
         </div>
 
     </div>
@@ -34,7 +34,7 @@ Mohakhali DOHS,</span>  Dhaka, Bangladesh</p>
 
         <p class="footer-company-about">
             <span>About the company</span>
-            Free Run is a travel agency to plan all kinds tours. We assist on planning home and abroad tours. We also serve ticketing and other necessary requirements for any tour. Free Run is the first choice of adventures people
+            Sea Kers is a travel agency to plan all kinds tours. We assist on planning home and abroad tours. We also serve ticketing and other necessary requirements for any tour. Seakers is the first choice of adventures people
         </p>
 
         <div class="footer-icons">

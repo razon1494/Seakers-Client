@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import {Spinner} from 'react-bootstrap';
 
 const Service = ({ service }) => {
-    // const {service} = props;
+    // destructuring
     const { _id, placeName, cost, speciality, image,duration } = service;
     return (
         <div  className="service pb-3 col-lg-3 my-4 mx-lg-5">
-
             <div>
             <img className='img-fluid' src={image} alt="" />
             <h3>{placeName}</h3>

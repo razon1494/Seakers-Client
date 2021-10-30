@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './FlyDubai.css'
-const FlyDubai = () => {
+const FlyDubai=() => {
+    //this part will added to placeorder for marketing new package
     return (
         <div className='dubai'>
-            <h2 className='dubai-title' >Fly Dubai With Free Run</h2>
+            <h2 className='dubai-title' >Fly Dubai With Sea Kers</h2>
 
             <h3 className='dubai-subtitle' >Enjoy Our Luxary Tour in Dubai</h3>
 
