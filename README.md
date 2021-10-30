@@ -1,4 +1,5 @@
-# SEA-KERS is a Tour Planner Company Website
+# SEA-KERS
+## It is a Tour Planner Company Website
 ## To see our live website please click the link below
 ## https://free-run-travels.web.app/home
 
@@ -43,4 +44,4 @@
 - For adding user must have to input all the fields
 - After fulfilling while click submit button the trip will show on home page
 
-*************Thank You For Reading**************************
+************* Thank You For Reading **************************
