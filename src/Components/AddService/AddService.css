@@ -13,7 +13,9 @@
 .add-container{
     background-color: rgba(169, 169, 169, 0.719);
 }
-
+.table-wrap{
+  overflow-x:auto;
+}
 /* .submit-part{
     color: orangered;
     border: none;
@@ -68,5 +70,11 @@
 @media (min-width: 768px) {
   .submit-part {
     padding: 16px 48px;
+  }
+}
+@media (max-width: 450px) {
+  .submit-part {
+    font-size: 8px;
+    text-align: center;
   }
 }

@@ -1,6 +1,15 @@
 .navigation-bar{
     background-color: whitesmoke;
 }
+.nav-head{
+    color: rgba(0, 191, 255);
+ font: normal 40px 'Cookie', cursive;
+ font-weight: 800;
+ margin: 0;
+}
+.kers{
+    color:rgba(95, 158, 160);
+}
 .navbar-title{
    text-decoration: none;
     color: DarkSlateGray;

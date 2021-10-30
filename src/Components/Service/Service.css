@@ -1,8 +1,26 @@
 .service{
     background-color: rgb(226, 241, 241);
     border-radius:10px ;
+    padding-top: 10px;
 }
+.service:hover{
+  background-color: LightCyan;
+  background-color: gray;
+  background-color: LavenderBlush;
+  background-color: floralwhite;
+  border: 1px solid lightcyan;
 
+}
+.place-spot{
+  color: saddlebrown;
+}
+.spot{
+  color:darkred;
+}
+.duration{
+  color: rgba(255, 68, 0, 0.678);
+  font-size: 1.3rem;
+}
 
 /* CSS */
 .book-btn {

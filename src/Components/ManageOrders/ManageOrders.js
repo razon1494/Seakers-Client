@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import useAuth from '../../context/useAuth';
 import './ManageOrders.css'
 const ManageOrders=() => {
     const [services, setServices]=useState([]);
     const [check, setCheck]=useState(true);
-    const [control, setConrol] = useState(false);
+    const [control, setConrol]=useState(false);
+    const {user}=useAuth();
         useEffect(() => {
         fetch('https://peaceful-temple-09783.herokuapp.com/managebookings')
             .then(res => res.json())
@@ -59,14 +61,15 @@ const ManageOrders=() => {
             </ul>
 
             <h1 className='admin-title my-4'>Admin Dashboard</h1>
-
-            <table class="table table-hover table-dark">
+<div className='table-responsive'>
+            <table class="table table-hover table-dark table-responsive-sm">
 <thead>
     <tr>
-      <th scope="col">Order No</th>
-      <th scope="col">Place</th>
+      <th scope="col">#</th>
+                        <th scope="col">Place</th>
+                        <th scope="col">User</th>
       <th scope="col">email</th>
-      <th scope="col">Cost</th>
+      <th scope="col">Phone</th>
       <th scope="col">Status</th>
       <th scope="col">Processing</th>
       <th scope="col">Delete</th>
@@ -77,8 +80,9 @@ const ManageOrders=() => {
                         services.map(service => <tr>
                             <th scope="row">{index++}</th>
                             <td>{service.placeName}</td>
+                            <td>{service.displayName}</td>
                             <td>{service.email}</td>
-                            <td>{service.cost}</td>
+                            <td>{service.phonenumber}</td>
                             <td>
                                 {
                         service.status? <button disabled className='btn btn-success'>Approved</button>:<button className='btn btn-success' onClick={() => handleApprove(service._id)}>Pending! Click to Approve</button>
@@ -86,7 +90,7 @@ const ManageOrders=() => {
                             </td>
                             <td>
                                 {
-                        service.status? <i class="fas fa-check tik"></i>:<i class="fas fa-times cross"></i>
+                        service.status? <i class="fas fa-play tik"></i>:<i class="fas fa-ban cross"></i>
                     }
 
                             </td>
@@ -99,7 +103,7 @@ const ManageOrders=() => {
 
                 </tr>)
                 }</tbody>
-                </table>
+                </table></div>
         </div>
     );
 };

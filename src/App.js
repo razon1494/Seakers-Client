@@ -12,6 +12,7 @@ import AuthProvider from './context/AuthProvider';
 import NavBar from './Components/NavBar/NavBar';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Footer from './Components/Footer/Footer';
+import ShowService from './Components/ShowServices/ShowService';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path='/home'>
             <Home></Home>
+            </Route>
+            <Route exact path='/show'>
+            <ShowService></ShowService>
           </Route>
           <PrivateRoute exact path='/addservice'>
             <AddService></AddService>

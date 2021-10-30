@@ -46,12 +46,7 @@ const AddService=() => {
         <h5 className='d-inline col-md-4'>Duration :   </h5>
                 <input className='col-md-8 py-3 my-3' {...register("duration", {required: true})} placeholder='duration' />
                 <br /><br />
-        <h5 className='d-inline col-md-4'>Distance :   </h5>
-                <input className='col-md-8 py-3 my-3' type="number" {...register("distance", {required: true})} placeholder='Distance From Dhaka' />
-                <br /><br />
-                <h5 className='d-inline col-md-4'>Transport  :   </h5>
-                <input className='col-md-8 py-3 my-3' {...register("transport", {required: true})} placeholder='Transport' />
-                <br /><br />
+
                 <h5 className='d-inline col-md-4'>Package Fee :   </h5>
                 <input className='col-md-8 py-3 my-3' type="number" {...register("cost", {required: true})} placeholder='Cost' />
                 <br /><br />

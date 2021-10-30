@@ -7,12 +7,12 @@ import './Navbar.css'
 const NavBar = () => {
     const { user, logOut } = useAuth();
     return (
-        <div className="">
+        <div className="mb-2">
             <Navbar fixed="top" className='d-block' collapseOnSelect expand="md" bg="light" variant="light">
   <Container>
             <Navbar.Brand>
               <NavLink to='/home' className='navbar-title'>
-               <h2>Free Run</h2>
+               <h2 className='nav-head'>SEA <span className='kers' >KERS</span> </h2>
                 </NavLink>
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -20,7 +20,8 @@ const NavBar = () => {
     <Nav className="me-auto">
     </Nav>
     <Nav>
-      <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to='/home'>Home</NavLink>
+                <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to='/home'>Home</NavLink>
+                <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to='/show'>Packages</NavLink>
       {user?.email && <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to="/myorders">My Bookings</NavLink>}
       {user?.email &&<NavLink className='nav-items fs-6 px-3  py-2 text-dark' to="/manageorders">Manage Bookings</NavLink>}
       {user?.email && <NavLink className='nav-items fs-6 px-3  py-2 text-dark' to="/addservice">Add Tour</NavLink>}
