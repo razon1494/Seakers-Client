@@ -7,7 +7,7 @@ const Services = () => {
   const [loading, setLoading] = useState(true);
   //getting all data
   useEffect(() => {
-    fetch("https://peaceful-temple-09783.herokuapp.com/services")
+    fetch("https://seakers-server-production.up.railway.app/services")
       .then((res) => res.json())
       .then((data) => {
         setServices(data);

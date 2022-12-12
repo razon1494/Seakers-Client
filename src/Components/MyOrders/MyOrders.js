@@ -15,7 +15,7 @@ const MyOrders = () => {
   const [control, setConrol] = useState(false);
   useEffect(() => {
     fetch(
-      `https://peaceful-temple-09783.herokuapp.com/mybookings/${user?.email}`
+      `https://seakers-server-production.up.railway.app/mybookings/${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => setBookings(data));
@@ -24,10 +24,13 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     var sure = window.confirm(`Are you sure you want to cancel this trip?`);
     if (sure) {
-      fetch(`https://peaceful-temple-09783.herokuapp.com/deletebooking/${id}`, {
-        method: "DELETE",
-        headers: { "content-type": "application/json" },
-      })
+      fetch(
+        `https://seakers-server-production.up.railway.app/deletebooking/${id}`,
+        {
+          method: "DELETE",
+          headers: { "content-type": "application/json" },
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {

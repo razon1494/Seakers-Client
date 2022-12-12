@@ -1,0 +1,26 @@
+.not-found{
+    background-image: url('https://image.freepik.com/free-vector/400-error-bad-request-concept-illustration_114360-1933.jpg');
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.go-btn{
+    border-radius: 5px;
+    border: none;
+    background-color: olive;
+    color: floralwhite;
+    margin-top: 50px;
+    padding: 20px 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.go-btn:hover{
+    background-color: goldenrod;
+    color: black;
+
+}
+
+#notfound{
+    font-weight: bolder;
+    color:olive;
+}

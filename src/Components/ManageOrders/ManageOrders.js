@@ -12,13 +12,13 @@ const ManageOrders = () => {
   const [control, setConrol] = useState(false);
   //Getting Booking Data
   useEffect(() => {
-    fetch("https://peaceful-temple-09783.herokuapp.com/managebookings")
+    fetch("https://seakers-server-production.up.railway.app/managebookings")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [check, control]);
   //status update
   const handleApprove = (id) => {
-    const url = `https://peaceful-temple-09783.herokuapp.com/services/${id}`;
+    const url = `https://seakers-server-production.up.railway.app/services/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -35,10 +35,13 @@ const ManageOrders = () => {
   const handleDelete = (id) => {
     var sure = window.confirm(`Are you sure you want to cancel this trip?`);
     if (sure) {
-      fetch(`https://peaceful-temple-09783.herokuapp.com/deletebooking/${id}`, {
-        method: "DELETE",
-        headers: { "content-type": "application/json" },
-      })
+      fetch(
+        `https://seakers-server-production.up.railway.app/deletebooking/${id}`,
+        {
+          method: "DELETE",
+          headers: { "content-type": "application/json" },
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {

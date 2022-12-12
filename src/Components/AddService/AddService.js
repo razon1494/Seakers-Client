@@ -14,7 +14,10 @@ const AddService = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post(`https://peaceful-temple-09783.herokuapp.com/addservice `, data)
+      .post(
+        `https://seakers-server-production.up.railway.app/addservice `,
+        data
+      )
       .then((res) => {
         if (res.data.insertedId) {
           //confirmation
