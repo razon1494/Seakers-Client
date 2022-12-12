@@ -4,6 +4,11 @@ import {Link, useParams} from 'react-router-dom';
 import useAuth from '../../context/useAuth';
 import './PlaceOrder.css';
 const PlaceOrder=() => {
+     //changing title
+    // This effect runs once, after the first render
+    useEffect(() => {
+        document.title="SEAKERS PLACEORDER";
+    }, []);
     //destructuring user
     const {user}=useAuth();
     //getting params from url
@@ -69,7 +74,7 @@ const PlaceOrder=() => {
             <h5 className="text-start spots"> <span className='span'> Spots Will Be visited:</span> {service?.speciality}</h5>
             <p className='text-start'>Your Email: {user.email}</p>
             <p className='text-start'>Your Name: {user.displayName}</p>
-            <p className='text-start'>Hello, {user.displayName} Please Put Your address & Phone number below. Hardcopy of tickets to your address. Also All documents will also be mailed to your email address {user.email} </p>
+            <p className='text-start'>Hello, <span className='place-details'>{user.displayName} </span>Please Put Your address & Phone number below. Hardcopy of tickets will be sent to your address. Also All documents will also be mailed to your email address <span className='place-details'> {user.email} </span></p>
             <h5 className='address'>Your Address</h5>
                     <textarea onChange={handleAddress} className="form-control container my-3" placeholder='Address' />
                     <h5 className='address my-4  '>Please Give Your Phone Number </h5>

@@ -4,7 +4,8 @@ import './Offers.css'
 const Offers=() => {
     //for homepage part
     return (
-        <div className='offer-container container py-3'>
+        <div className='offer-container'>
+            <div className='container  py-3'>
             <h2 className='offer-title my-4'>OUR NOVEMBER OFFER</h2>
             <div className="row justify-content-center align-items-center mt-5">
                 <div className="offer-img col-md-5">
@@ -33,7 +34,7 @@ const Offers=() => {
                 </div>
             </div>
 
-        </div>
+        </div></div>
     );
 };
 

@@ -13,8 +13,10 @@ import NavBar from './Components/NavBar/NavBar';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Footer from './Components/Footer/Footer';
 import ShowService from './Components/ShowServices/ShowService';
+import {useEffect} from 'react';
 
 function App() {
+
   return (
     <div className="App">
       <AuthProvider>

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Login.css';
 import useAuth from '../../context/useAuth'
 import {useHistory, useLocation} from 'react-router-dom/cjs/react-router-dom.min';
 const Login=() => {
+   //changing title
+    // This effect runs once, after the first render
+    useEffect(() => {
+        document.title="SEAKERS LOGIN";
+    }, []);
   //destructuring googlesign in from auth context
     const {signInUsingGoogle, setIsLoading}=useAuth();
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Carousel} from 'react-bootstrap';
 import './Slider.css';
 /* import slider1 from 'https://i.ibb.co/nDzymn2/slide1.png'
@@ -8,6 +8,7 @@ import slider4 from 'https://i.ibb.co/Nycc57b/slide4.png' */
 
 //react-bootstrap carousel
 const Slider=() => {
+
     return (
         <div className='container mb-5 mt-0'>
 <Carousel>
